@@ -121,8 +121,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_23_215335) do
     t.bigint "account_id", null: false
     t.bigint "sla_policy_id", null: false
     t.bigint "conversation_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.integer "sla_status", default: 0
     t.index ["account_id", "sla_policy_id", "conversation_id"], name: "index_applied_slas_on_account_sla_policy_conversation", unique: true
     t.index ["account_id"], name: "index_applied_slas_on_account_id"
@@ -546,8 +546,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_23_215335) do
     t.string "description"
     t.bigint "account_id", null: false
     t.text "permissions", default: [], array: true
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["account_id"], name: "index_custom_roles_on_account_id"
   end
 
@@ -624,9 +624,9 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_23_215335) do
     t.bigint "portal_id"
     t.integer "sender_name_type", default: 0, null: false
     t.string "business_name"
-    t.boolean "allow_agent_to_delete_message", default: true, null: false
-    t.string "external_token"
+    t.string "external_token", default: "", null: false
     t.boolean "csat_response_visible", default: false, null: false
+    t.boolean "allow_agent_to_delete_message", default: true, null: false
     t.index ["account_id"], name: "index_inboxes_on_account_id"
     t.index ["channel_id", "channel_type"], name: "index_inboxes_on_channel_id_and_channel_type"
     t.index ["portal_id"], name: "index_inboxes_on_portal_id"
