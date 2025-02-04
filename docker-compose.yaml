@@ -1,4 +1,4 @@
-version: '3'
+# version: '3'
 
 services:
   base: &base
@@ -76,7 +76,7 @@ services:
     ports:
       - "3035" # Webpack dev server
     environment:
-      - WEBPACKER_DEV_SERVER_HOST=0.0.0.0
+      - WEBPACKER_DEV_SERVER_HOST=127.0.0.1
       - NODE_ENV=development
       - NODE_OPTIONS=--openssl-legacy-provider
       - RAILS_ENV=development
@@ -93,7 +93,7 @@ services:
     environment:
       - POSTGRES_DB=chatwoot
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=
+      - POSTGRES_PASSWORD=postgresspwd
 
   redis:
     image: redis:alpine
