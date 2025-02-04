@@ -76,4 +76,6 @@ Rails.application.configure do
     Bullet.bullet_logger = true
     Bullet.rails_logger = true
   end
+
+  config.web_console.permissions = ['172.0.0.0/8', '127.0.0.0/8']
 end

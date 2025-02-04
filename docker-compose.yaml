@@ -74,9 +74,9 @@ services:
       - cache:/app/tmp/cache
       - bundle:/usr/local/bundle
     ports:
-      - "3035" # Webpack dev server
+      - "3035:3035" # Webpack dev server
     environment:
-      - WEBPACKER_DEV_SERVER_HOST=127.0.0.1
+      - WEBPACKER_DEV_SERVER_HOST=0.0.0.0
       - NODE_ENV=development
       - NODE_OPTIONS=--openssl-legacy-provider
       - RAILS_ENV=development
@@ -89,7 +89,7 @@ services:
     ports:
       - '5432:5432'
     volumes:
-      - postgres:/data/postgres
+      - postgres:/var/lib/postgresql/data
     environment:
       - POSTGRES_DB=chatwoot
       - POSTGRES_USER=postgres
