@@ -93,9 +93,9 @@
   enabled: false
   premium: true
 - name: hide_all_chats_for_agent
-  enabled: false
+  enabled: true
 - name: hide_contacts_for_agent
-  enabled: false
+  enabled: true
 - name: hide_filters_for_agent
   enabled: false
 - name: send_agent_name_in_whatsapp_message
@@ -107,9 +107,9 @@
 - name: agent_conversation_viewed
   enabled: true
 - name: hide_unassigned_for_agent
-  enabled: false
+  enabled: true
 - name: hide_all_inbox_for_agent
-  enabled: false
+  enabled: true
 # - name: channel_notifica_me
 #   enabled: false
 - name: channel_sms
