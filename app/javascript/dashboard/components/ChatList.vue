@@ -230,6 +230,13 @@ export default {
       accountId: 'getCurrentAccountId',
     }),
     hideAllChatsForAgents() {
+      const currentRole = this.currentRole;
+      const accountId = this.accountId;
+      const isFeatureEnabled = this.isFeatureEnabledonAccount(
+        accountId,
+        'hide_all_chats_for_agent'
+      );
+
       return (
         this.currentRole !== 'administrator' &&
         this.isFeatureEnabledonAccount(
@@ -280,7 +287,7 @@ export default {
       return getUserPermissions(this.currentUser, this.currentAccountId);
     },
     assigneeTabItems() {
-      return filterItemsByPermission(
+      let items = filterItemsByPermission(
         ASSIGNEE_TYPE_TAB_PERMISSIONS,
         this.userPermissions,
         item => item.permissions
@@ -289,6 +296,12 @@ export default {
         name: this.$t(`CHAT_LIST.ASSIGNEE_TYPE_TABS.${key}`),
         count: this.conversationStats[countKey] || 0,
       }));
+
+      if (this.hideAllChatsForAgents) {
+        items = items.filter(item => item.key !== 'all');
+      }
+
+      return items;
     },
     showAssigneeInConversationCard() {
       return (
