@@ -121,6 +121,7 @@
       "HEADER": "Ongoing campaigns",
       "404": "There are no ongoing campaigns created",
       "INBOXES_NOT_FOUND": "Please create an website inbox and start adding campaigns"
-    }
+    },
+    "IFRAME_URL_NOT_CONFIGURED": "Campaigns iframe URL not configured. Please set CAMPAIGNS_IFRAME_URL environment variable."
   }
 }

@@ -8,35 +8,13 @@ export default {
       path: frontendURL('accounts/:accountId/campaigns'),
       component: SettingsContent,
       props: {
-        headerTitle: 'CAMPAIGN.ONGOING.HEADER',
-        icon: 'arrow-swap',
+        headerTitle: 'CAMPAIGN.HEADER',
+        icon: 'megaphone',
       },
       children: [
         {
           path: '',
-          redirect: 'ongoing',
-        },
-        {
-          path: 'ongoing',
-          name: 'ongoing_campaigns',
-          meta: {
-            permissions: ['administrator'],
-          },
-          component: Index,
-        },
-      ],
-    },
-    {
-      path: frontendURL('accounts/:accountId/campaigns'),
-      component: SettingsContent,
-      props: {
-        headerTitle: 'CAMPAIGN.ONE_OFF.HEADER',
-        icon: 'sound-source',
-      },
-      children: [
-        {
-          path: 'one_off',
-          name: 'one_off',
+          name: 'campaigns_iframe',
           meta: {
             permissions: ['administrator'],
           },
