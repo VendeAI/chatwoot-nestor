@@ -9,7 +9,7 @@ export default {
       component: SettingsContent,
       props: {
         headerTitle: 'CAMPAIGN.HEADER',
-        icon: 'megaphone',
+        icon: 'bot',
       },
       children: [
         {

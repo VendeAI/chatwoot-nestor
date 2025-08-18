@@ -18,6 +18,14 @@ const primaryMenuItems = accountId => [
     toStateName: 'home',
   },
   {
+    icon: 'bot',
+    key: 'campaigns',
+    label: 'CAMPAIGNS',
+    featureFlag: FEATURE_FLAGS.CAMPAIGNS,
+    toState: frontendURL(`accounts/${accountId}/campaigns`),
+    toStateName: 'campaigns_iframe',
+  },
+  {
     icon: 'captain',
     key: 'captain',
     label: 'CAPTAIN',
@@ -40,14 +48,6 @@ const primaryMenuItems = accountId => [
     featureFlag: FEATURE_FLAGS.REPORTS,
     toState: frontendURL(`accounts/${accountId}/reports`),
     toStateName: 'account_overview_reports',
-  },
-  {
-    icon: 'megaphone',
-    key: 'campaigns',
-    label: 'CAMPAIGNS',
-    featureFlag: FEATURE_FLAGS.CAMPAIGNS,
-    toState: frontendURL(`accounts/${accountId}/campaigns`),
-    toStateName: 'campaigns_iframe',
   },
   {
     icon: 'library',
