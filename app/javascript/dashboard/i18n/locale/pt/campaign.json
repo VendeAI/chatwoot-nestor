@@ -1,7 +1,7 @@
 {
   "CAMPAIGN": {
-    "HEADER": "Campanhas",
-    "SIDEBAR_TXT": "Mensagens proativas permitem que o cliente envie mensagens para seus contatos, o que desencadearia mais conversas. Clique em <b>Adicionar Campanha</b> para criar uma nova campanha. Você também pode editar ou excluir uma campanha existente clicando no botão Editar ou Excluir.",
+    "HEADER": "Painel VendeAI",
+    "SIDEBAR_TXT": "Painel VendeAI",
     "HEADER_BTN_TXT": {
       "ONE_OFF": "Criar uma campanha única",
       "ONGOING": "Criar uma campanha contínua"
